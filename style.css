@@ -22,7 +22,7 @@ h1{
 }
 
 h2{
-    margin: 1em 0em 1em 0em;
+
     font-size: 1.5em;
     color:#013846;
     text-align: center;
@@ -119,11 +119,12 @@ header{
     overflow: hidden;
 }
 .header-text{
-    position: relative;
-    margin-top: -27em;
-    margin-bottom: 0px;
-    width: fit-content;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: pink;
 }
 
 header h1{
@@ -137,7 +138,6 @@ header h1{
 }
 
 header h2{
-    margin: -0.75em auto 1em auto;
     width: fit-content;
     font-family: 'Lexend', sans-serif;
     font-size: 2em;
@@ -145,11 +145,12 @@ header h2{
     text-shadow: 2px 2px 5px black ; 
 }
 
-.header-bg{
+.header-bg-grp{
     position: relative;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+
+    height: fit-content;
 }
 
 #h-bg-cog-0{
@@ -421,7 +422,6 @@ footer a:hover{
     justify-content: center;
     align-items: center;
     width:100%;
-    margin-top: -150px;
 }
 .hpage-brand-statement p{
     display: flex;
@@ -430,7 +430,7 @@ footer a:hover{
 /*********Portfolio Page**********/
 
 main{
-    margin: 3%;
+    margin: 0%;
     font-size: 1em;
     font-family: 'Lexend', sans-serif;
 
@@ -439,6 +439,7 @@ main{
     margin: 0;
     padding: 20px;
     width: 100%;
+    
 }
 
 .grid-ul li{
@@ -446,6 +447,9 @@ main{
     text-align: center;
     box-shadow: 5px 5px 10px 2px #013846;
     background:#E6E9F5;
+    
+    border-radius: 15px;
+    
 }
 
 .grid-ul li h2{
@@ -454,9 +458,15 @@ main{
     align-self: center;
 }
 .grid-ul li img{
-    width: 90%;
-    margin: 0% 5% 5% 5%;
+    display: block;
+    max-width: 230px;
+    max-height: 150px;
+    width:auto;
+    height: auto;
     border: inset #EC7D00 3px;
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .grid-ul li p{
@@ -518,6 +528,20 @@ main{
     color: #013846;
 }
 
+.more-info-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.more-info-flex p{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
 .grid ul > *{
     margin: 1rem;
 }
@@ -543,14 +567,12 @@ main{
     height:100%;
 }
 
-.bullet-list{
-    
-}
 .bullet-list li{
     background-color: none;
     box-shadow: none;
     list-style-type: disc;
     text-align: left;
+    border: none;
 }
 
 /*Make fullwidth cards span all grid columns.*/
