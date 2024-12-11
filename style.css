@@ -110,24 +110,21 @@ h3{
 
 /*********Header**********/
 header{
-    display: flex;
-    flex-direction: column;
-    padding: 0% 0% 0% 0%;
     width: 100%;
-    margin:auto;
-    align-items: center;
     overflow: hidden;
+
 }
 .header-text{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    width: 100%;
     position: absolute;
-    background-color: pink;
+    background-color: transparent;
 }
 
 header h1{
+    text-align: center;
     border-bottom: solid #EC7D00 2px;
     padding-bottom: 15px;
     width:fit-content;
@@ -135,23 +132,32 @@ header h1{
     font-size: 5em;  
     color:#013846;
     text-shadow: 2px 2px 5px black ;
+    background-color: #E6E9F5;
+    z-index: 5;
 }
 
 header h2{
     width: fit-content;
     font-family: 'Lexend', sans-serif;
+    margin-top: -30px;
     font-size: 2em;
     color:#013846; 
     text-shadow: 2px 2px 5px black ; 
+    background-color: #E6E9F5;
 }
 
-.header-bg-grp{
+.header-bg-grp {
+    height: fit-content;
+    width: 100%;
+}
+
+.header-bg{
     position: relative;
     display: flex;
     flex-direction: row;
-
-    height: fit-content;
+    justify-content: center;
 }
+
 
 #h-bg-cog-0{
     margin: 0px;
@@ -182,6 +188,18 @@ header h2{
     transition: .10s;
 }
 
+.socials{
+    display: flex;
+    gap: 30px;
+    background-color: #E6E9F5;
+    z-index: 2;
+}
+
+.socials i{
+    color: #013846;
+    font-size: 3em;
+    z-index: 5;
+}
 /*********CV Call To Action Button**********/
 /* .btn-container{
     display: flex;
@@ -396,7 +414,10 @@ footer a:hover{
 .quote img{
     width: 5%;
 }
-
+.hpage-main{
+    margin-top: -100px;
+    color: #013846;
+}
 .home-content{
     display:flex;
     flex-wrap: wrap;
@@ -419,7 +440,7 @@ footer a:hover{
 .hpage-brand-statement{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     width:100%;
 }
