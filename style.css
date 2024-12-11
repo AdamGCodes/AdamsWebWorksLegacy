@@ -110,24 +110,21 @@ h3{
 
 /*********Header**********/
 header{
-    display: flex;
-    flex-direction: column;
-    padding: 0% 0% 0% 0%;
     width: 100%;
-    margin:auto;
-    align-items: center;
     overflow: hidden;
+
 }
 .header-text{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    width: 100%;
     position: absolute;
-    background-color: pink;
+    background-color: transparent;
 }
 
 header h1{
+    text-align: center;
     border-bottom: solid #EC7D00 2px;
     padding-bottom: 15px;
     width:fit-content;
@@ -135,23 +132,32 @@ header h1{
     font-size: 5em;  
     color:#013846;
     text-shadow: 2px 2px 5px black ;
+    background-color: #E6E9F5;
+    z-index: 5;
 }
 
 header h2{
     width: fit-content;
     font-family: 'Lexend', sans-serif;
+    margin-top: -30px;
     font-size: 2em;
     color:#013846; 
     text-shadow: 2px 2px 5px black ; 
+    background-color: #E6E9F5;
 }
 
-.header-bg-grp{
+.header-bg-grp {
+    height: fit-content;
+    width: 100%;
+}
+
+.header-bg{
     position: relative;
     display: flex;
     flex-direction: row;
-
-    height: fit-content;
+    justify-content: center;
 }
+
 
 #h-bg-cog-0{
     margin: 0px;
@@ -182,6 +188,18 @@ header h2{
     transition: .10s;
 }
 
+.socials{
+    display: flex;
+    gap: 30px;
+    background-color: #E6E9F5;
+    z-index: 2;
+}
+
+.socials i{
+    color: #013846;
+    font-size: 3em;
+    z-index: 5;
+}
 /*********CV Call To Action Button**********/
 /* .btn-container{
     display: flex;
@@ -396,7 +414,10 @@ footer a:hover{
 .quote img{
     width: 5%;
 }
-
+.hpage-main{
+    margin-top: -100px;
+    color: #013846;
+}
 .home-content{
     display:flex;
     flex-wrap: wrap;
@@ -419,7 +440,7 @@ footer a:hover{
 .hpage-brand-statement{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     width:100%;
 }
@@ -576,19 +597,42 @@ main{
 }
 
 /*Make fullwidth cards span all grid columns.*/
-.fullwidth{
+.fullwidth {
+    grid-column: 1 / -1;
     display: flex;
-    grid-column: 1/ -1;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    position: relative;
+    width: 100%;
+    transition: max-height 0.8s ease, opacity 0.5s ease;
+    border: solid #EC7D00 4px;
+    z-index: 1;
 }
 
-.is-hidden{
-    display: none;
+.fullwidth.is-hidden{
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.8s ease-in-out, opacity 0.5s ease-in-out, position 0s 0.8s;
 }
 
-.fullwidth,
+
+.fullwidth:not(.is-hidden){
+    max-height: 1000px;
+    opacity: 1;
+    position: relative;
+    /* ^ Brings back into the doc flow when visible */
+}
+
+.fullwidth.absolute {
+    position: absolute;
+}
+
 .is-selected{
     border: solid #EC7D00 4px;
 }
+
+
 
 /*********Experience Page**********/
 .exp-intro p{
@@ -820,6 +864,52 @@ main{
 .location iframe{
     width: 100%;
     height: 100%;
+}
+
+
+/* Skills Page */
+
+.skills-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.icon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    color: var(--primary-text-color);
+    /* Replace with your site's primary text color */
+    background-color: var(--background-color);
+    /* Replace with your site's background color */
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.icon-container i {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.icon-container span {
+    font-family: 'Lexend', sans-serif;
+    /* Matches your font choice */
+    font-size: 1rem;
+}
+
+.icon-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(255, 165, 0, 0.4);
+    /* Orange glow */
+    color: orange;
 }
 
 /*Sitewide Media Queries*/

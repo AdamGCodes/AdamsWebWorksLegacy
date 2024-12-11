@@ -16,6 +16,7 @@ let toggleParent; // <li>.
 let fullwidth; // Fullwidth card to be "injected".
 
 const openQuickView = (toggle, toggleParent, fullwidth) => {
+    fullwidth.classList.remove('absolute');
     toggle.setAttribute('aria-expanded', 'true');
     toggleParent.classList.toggle('is-selected');
     fullwidth.classList.toggle('is-hidden');
@@ -28,6 +29,13 @@ const closeQuickView = (toggle, toggleParent, fullwidth) => {
     toggleParent.classList.toggle('is-selected');
     fullwidth.classList.toggle('is-hidden');
     fullwidth.removeAttribute('tabIndex');
+    
+    fullwidth.addEventListener('transitionend', function handleTransitionEnd(event){
+        if (event.propertyName === 'max-height' && fullwidth.classList.contains('is-hidden')){
+            fullwidth.classList.add('absolute');
+        }
+        fullwidth.removeEventListener('transitioned', handleTransitionEnd);
+    })
 };
 
 quickViewButtons.forEach(quickView =>{
