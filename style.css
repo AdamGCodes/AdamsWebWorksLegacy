@@ -28,11 +28,6 @@ h3{
     font-size: 1.25em;
 }
 
-:focus{
-    outline: solid black 2px;
-    outline-offset: 2px;
-}
-
 /*********Main Nav Bar**********/
 .navbar{
     min-height: 70px;
@@ -49,12 +44,10 @@ h3{
     background-color: #E6E9F5;
     gap: 60px;
     z-index: 5;
-
 }
 .nav-menu ul{
     display: flex;
     z-index: 5;
-
 }
 .nav-menu li{
     list-style-type: none;
@@ -65,8 +58,7 @@ h3{
     position: relative;    
     text-decoration: none;
     color: #013846;
-    font-size: 1.25em;
-    
+    font-size: 24px;
 }
 .nav-menu a:after{
     content:"";
@@ -85,7 +77,6 @@ h3{
 .nav-menu a:hover:after{
     transform:scaleX(1);
     transform-origin: bottom center;
-    
 }
 
 .nav-menu a.active{
@@ -123,7 +114,6 @@ header{
     width: 100%;
     position: absolute;
     background-color: transparent;
-
 }
 
 header h1{
@@ -136,7 +126,7 @@ header h1{
     color:#013846;
     text-shadow: 2px 2px 5px black ;
     background-color: #E6E9F5;
-    z-index: 5;
+    z-index: 1;
 }
 
 header h2{
@@ -152,7 +142,7 @@ header h2{
 .header-bg-grp {
     height: fit-content;
     width: 100%;
-    margin-bottom: -100px;
+    margin-bottom: -90px;
     z-index: -10;
 }
 
@@ -162,7 +152,6 @@ header h2{
     flex-direction: row;
     justify-content: center;
 }
-
 
 #h-bg-cog-0{
     margin: 0px;
@@ -205,103 +194,6 @@ header h2{
     font-size: 3em;
     z-index: 5;
 }
-/*********Skills Button**********/
-.btn-container{
-    display: flex;
-    max-width: 90%;
-    justify-content: center;
-    align-items: center;
-    margin-top: 50px;
-}
-
-.btn{
-    position: relative;
-    display: inline-block;
-    border: none;
-    border-radius: 100%;
-    padding: 20px 50px 20px 50px;/*20px 50px 20px 50px*/
-    color: #013846;;
-    font-size: 1.10em;
-    font-weight: 600;
-    letter-spacing: 1px;
-    transition: 0.5s;
-    transition-delay: 0.60s;
-}
-.btn:hover{
-    color: #013846;
-    background-color: #f7fafb;
-    cursor: pointer;
-    transition: 0.3s;
-}
-/*Button Animation*/
-.btn span{
-    display:block;
-    position: absolute;
-    background: #EC7D00;
-    border-radius: 50%;
-}
-.btn span:nth-child(1){
-    left: 0;
-    bottom: 0;
-    width: 2px;
-    height: 100%;
-    transform: scaleY(0);
-    transform-origin: top;
-    transition: transform 0.3s;
-}
-.btn:hover span:nth-child(1){
-    transform: scaleY(1);
-    transform-origin: bottom;
-    transition: transform 0.3s;
-}
-.btn span:nth-child(2){
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 2px;
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 0.3s;
-}
-.btn:hover span:nth-child(2){
-    transform: scaleX(1);
-    transform-origin: left;
-    transition: transform 0.3s;
-}
-.btn span:nth-child(3){
-    right: 0;
-    bottom: 0;
-    width: 2px;
-    height: 100%;
-    transform: scaleY(0);
-    transform-origin: top;
-    transition: transform 0.3s;
-    transition-delay: 0.3s;
-}
-.btn:hover span:nth-child(3){
-    transform: scaleY(1);
-    transform-origin: bottom;
-    transition: transform 0.3s;
-    transition-delay: 0.3s;
-}
-.btn span:nth-child(4){
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 2px;
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 0.3s;
-    transition-delay: 0.3s;
-}
-.btn:hover span:nth-child(4){
-    transform: scaleX(1);
-    transform-origin: left;
-    transition: transform 0.3s;
-    transition-delay: 0.3s;
-}
-
-
 
 /*********Footer and all elements in footer**********/
 footer{
@@ -327,6 +219,7 @@ footer{
 }
 .foot-nav li{
     list-style-type:none;
+    font-size: 24px;
 }
 .foot-socials{
     text-decoration: none;
@@ -367,21 +260,14 @@ footer a:hover{
     color: #013846;
 }
 
-.hpage-main p{
-    margin: 0;
-}
 .hpage-brand-statement {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    text-align: center;
     width: 90%;
 }
 .passions-section{
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    align-items: center;
-    text-align: center;
     gap: 20px;
     margin-top: 30px;
     width: 90%;
@@ -419,7 +305,7 @@ footer a:hover{
     display: block;
     color: #013846;
     font-size: 16px;
-    padding: 10px;
+    padding: 0 10px;
     line-height: 1.4;
     text-align: center;
     overflow-wrap: break-word;
@@ -432,10 +318,11 @@ footer a:hover{
 
 /*********Portfolio Page**********/
 
-main{
-    margin: 0%;
+.portfolio-main{
+    margin: 0px 0;
     font-size: 1em;
     font-family: 'Lexend', sans-serif;
+    background-color: transparent;
 
 }
 .grid-ul{
@@ -484,7 +371,7 @@ main{
     width: 50%;
     color: white;
     background-color: #013846; 
-    font-size: 1em;
+    font-size: 24px;
     
 }
 .grid-ul li .open-btn:hover{
@@ -529,6 +416,7 @@ main{
 .more-info i{
     font-size: 4em;
     color: #013846;
+    margin: 0 5px;
 }
 
 .more-info-flex {
@@ -537,6 +425,7 @@ main{
     justify-content: center;
     align-items: center;
     width: 100%;
+
 }
 .more-info-flex p{
     display: flex;
@@ -670,6 +559,7 @@ main{
 }
 
 .fom-btn{
+    display: none;
     background-color: #E6E9F5;
     color: #013846;
     font: 1em 'Lexend', sans-serif;    
@@ -695,8 +585,187 @@ main{
     margin-left: -1em;
 }
 
+/* Timeline container */
+.timeline-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin: 20px auto;
+    padding: 20px 0;
+}
+
+.timeline-container::before {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 100%;
+    background: #013846;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+/* Individual timeline items */
+.timeline-item {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.timeline-item h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: #013846;
+}
+
+.timeline-item p {
+    margin: 10px 0 0;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #EC7D00;
+    border-radius: 50%;
+    border: 2px solid #013846;
+    top: 20px;
+    left: -35px;
+    transform: translateX(50%);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .timeline-container::before {
+    left: 20px;
+    }
+    .timeline-item {
+    width: 90%;
+    margin-left: 40px;
+    }
+    .timeline-item::before {
+    left: -20px;
+    }
+}
 
 /* Skills Page */
+/**Skills Button**/
+.btn-container {
+    display: flex;
+    max-width: 90%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.btn {
+    position: relative;
+    display: inline-block;
+    border: none;
+    border-radius: 100%;
+    padding: 20px 50px 20px 50px;
+    /*20px 50px 20px 50px*/
+    color: #013846;
+    ;
+    font-size: 1.10em;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: 0.5s;
+    transition-delay: 0.60s;
+}
+
+.btn:hover {
+    color: #013846;
+    background-color: #f7fafb;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/*Button Animation*/
+.btn span {
+    display: block;
+    position: absolute;
+    background: #EC7D00;
+    border-radius: 50%;
+}
+
+.btn span:nth-child(1) {
+    left: 0;
+    bottom: 0;
+    width: 2px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.3s;
+}
+
+.btn:hover span:nth-child(1) {
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.3s;
+}
+
+.btn span:nth-child(2) {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s;
+}
+
+.btn:hover span:nth-child(2) {
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.3s;
+}
+
+.btn span:nth-child(3) {
+    right: 0;
+    bottom: 0;
+    width: 2px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.3s;
+    transition-delay: 0.3s;
+}
+
+.btn:hover span:nth-child(3) {
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.3s;
+    transition-delay: 0.3s;
+}
+
+.btn span:nth-child(4) {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s;
+    transition-delay: 0.3s;
+}
+
+.btn:hover span:nth-child(4) {
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.3s;
+    transition-delay: 0.3s;
+}
+
+
 #skills-section {
     position: relative;
     max-width: 90%;
@@ -723,7 +792,7 @@ main{
 
 #skills-icons {
 
-    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
     gap: 1rem;
     margin-top: 1rem;
     padding: 1rem;
@@ -749,7 +818,7 @@ main{
 
 .icon-container i {
     font-size: 4rem;
-    color: #333;
+    color: #013846;
 }
 
 .icon-container span {
@@ -766,7 +835,7 @@ main{
 }
 
 /*Sitewide Media Queries*/
-@media(max-width:420){
+@media(max-width:420px){
     .btn-container{
         display: flex;
         margin: -5em auto 7em auto;
@@ -775,6 +844,28 @@ main{
     }
 }
 
+@media(max-width:500px){
+    .header-text h1{
+        font-size: 15vw;
+    }
+    .header-text h2{
+        font-size: 8vw;
+    }
+    .header-bg-grp{
+        margin-bottom: -150px;
+    }
+    .passions-section{
+        margin-bottom: 10px;
+    }
+    .passion-div.expanded p{
+        margin-top: 5px;
+        font-size: 15px;
+    }
+    .passion-div.expanded h3{
+        margin-bottom: 1px;
+    }
+
+}
 @media(max-width: 768px){
     .hamburger{
         display:block;

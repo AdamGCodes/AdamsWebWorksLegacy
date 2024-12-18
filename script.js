@@ -15,7 +15,6 @@ document.querySelectorAll('.passion-div').forEach((div) => {
 });
 
 
-
 //*********Expand and Collaps Skills Deck************
 function toggleSkills() {
     const skillsIcons = document.getElementById("skills-icons");
@@ -30,7 +29,7 @@ function toggleSkills() {
 }
 
 // Initialize with hidden icons
-document.getElementById("skills-icons").style.display = "none";
+// document.getElementById("skills-icons").style.display = "none";
 
 //*********Extra info pannels for portfolio Grid************
 const quickViewButtons = document.querySelectorAll('[data-quick-view]');
