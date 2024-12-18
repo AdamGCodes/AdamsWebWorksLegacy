@@ -7,6 +7,15 @@ hamburger.addEventListener("click", () =>{
     navMenu.classList.toggle("active");
 })
 
+//*********Expand and Collaps Passion Bubbles************
+document.querySelectorAll('.passion-div').forEach((div) => {
+    div.addEventListener('click', () => {
+        div.classList.toggle('expanded');
+    });
+});
+
+
+
 //*********Expand and Collaps Skills Deck************
 function toggleSkills() {
     const skillsIcons = document.getElementById("skills-icons");
