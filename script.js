@@ -7,6 +7,30 @@ hamburger.addEventListener("click", () =>{
     navMenu.classList.toggle("active");
 })
 
+//*********Expand and Collaps Passion Bubbles************
+document.querySelectorAll('.passion-div').forEach((div) => {
+    div.addEventListener('click', () => {
+        div.classList.toggle('expanded');
+    });
+});
+
+
+//*********Expand and Collaps Skills Deck************
+function toggleSkills() {
+    const skillsIcons = document.getElementById("skills-icons");
+    skillsIcons.classList.toggle("expanded");
+    if (skillsIcons.classList.contains("expanded")) {
+        skillsIcons.style.display = "grid";
+    } else {
+        setTimeout(() => {
+            skillsIcons.style.display = "none";
+        }, 300); // Match the transition duration
+    }
+}
+
+// Initialize with hidden icons
+// document.getElementById("skills-icons").style.display = "none";
+
 //*********Extra info pannels for portfolio Grid************
 const quickViewButtons = document.querySelectorAll('[data-quick-view]');
 const closeButtons = document.querySelectorAll('[data-close]');
